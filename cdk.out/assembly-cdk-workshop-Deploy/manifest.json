@@ -1,0 +1,263 @@
+{
+  "version": "21.0.0",
+  "artifacts": {
+    "cdkworkshopDeployWebServiceB7A7A544.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "cdkworkshopDeployWebServiceB7A7A544.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "cdkworkshopDeployWebServiceB7A7A544": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "cdkworkshopDeployWebServiceB7A7A544.template.json",
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/757a79af092429f97e170d8295bb1dd5603da5890cd353600727338935ef1e3f.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "cdkworkshopDeployWebServiceB7A7A544.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "Deploy-WebService"
+      },
+      "dependencies": [
+        "cdkworkshopDeployWebServiceB7A7A544.assets"
+      ],
+      "metadata": {
+        "/cdk-workshop/Deploy/WebService/HelloHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHandlerServiceRole11EF7C63"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/HelloHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHandler2E4FBA4D"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/HelloHitCounter/Hits/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHits7AAEBF80"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/HelloHitCounter/HitCounterHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHitCounterHandlerServiceRoleD45002B8"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/HelloHitCounter/HitCounterHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHitCounterHandlerServiceRoleDefaultPolicy1487A60A"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/HelloHitCounter/HitCounterHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHitCounterHandlerDAEA7B37"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/Endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointEEF1FD8F"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/Endpoint/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointDeployment318525DA0e6892e2b5e7e60faa62d8628469c799"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/Endpoint/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointDeploymentStageprodB78BEEA0"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/Endpoint/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Endpoint8024A810"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/Endpoint/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Endpointproxy39E2174E"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/Endpoint/Default/{proxy+}/ANY/ApiPermission.cdkworkshopDeployWebServiceEndpoint8518B0F3.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointproxyANYApiPermissioncdkworkshopDeployWebServiceEndpoint8518B0F3ANYproxy76363590"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/Endpoint/Default/{proxy+}/ANY/ApiPermission.Test.cdkworkshopDeployWebServiceEndpoint8518B0F3.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointproxyANYApiPermissionTestcdkworkshopDeployWebServiceEndpoint8518B0F3ANYproxyE4519FB0"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/Endpoint/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointproxyANYC09721C5"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/Endpoint/Default/ANY/ApiPermission.cdkworkshopDeployWebServiceEndpoint8518B0F3.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointANYApiPermissioncdkworkshopDeployWebServiceEndpoint8518B0F3ANYB935A3FC"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/Endpoint/Default/ANY/ApiPermission.Test.cdkworkshopDeployWebServiceEndpoint8518B0F3.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointANYApiPermissionTestcdkworkshopDeployWebServiceEndpoint8518B0F3ANYDD915572"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/Endpoint/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointANY485C938B"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/Rendered/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterRenderedServiceRole675F1032"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/Rendered/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterRenderedServiceRoleDefaultPolicyDE9FAE59"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/Rendered/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterRenderedC0E2A803"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/ViewerEndpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterViewerEndpoint2DEDF5F6"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/ViewerEndpoint/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterViewerEndpointDeployment31559A0912d672fa8a0b105d3e2b4fdee3be5ea6"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/ViewerEndpoint/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterViewerEndpointDeploymentStageprod21A157F7"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/ViewerEndpoint/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterViewerEndpoint43A61FC6"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/ViewerEndpoint/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterViewerEndpointproxy2201AA3D"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/ViewerEndpoint/Default/{proxy+}/ANY/ApiPermission.cdkworkshopDeployWebServiceViewHitsCounterViewerEndpointEFC0799A.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterViewerEndpointproxyANYApiPermissioncdkworkshopDeployWebServiceViewHitsCounterViewerEndpointEFC0799AANYproxy5B9A4EAE"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/ViewerEndpoint/Default/{proxy+}/ANY/ApiPermission.Test.cdkworkshopDeployWebServiceViewHitsCounterViewerEndpointEFC0799A.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterViewerEndpointproxyANYApiPermissionTestcdkworkshopDeployWebServiceViewHitsCounterViewerEndpointEFC0799AANYproxyA0D3D8B2"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/ViewerEndpoint/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterViewerEndpointproxyANY0C9BD9ED"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/ViewerEndpoint/Default/ANY/ApiPermission.cdkworkshopDeployWebServiceViewHitsCounterViewerEndpointEFC0799A.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterViewerEndpointANYApiPermissioncdkworkshopDeployWebServiceViewHitsCounterViewerEndpointEFC0799AANY7B29724F"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/ViewerEndpoint/Default/ANY/ApiPermission.Test.cdkworkshopDeployWebServiceViewHitsCounterViewerEndpointEFC0799A.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterViewerEndpointANYApiPermissionTestcdkworkshopDeployWebServiceViewHitsCounterViewerEndpointEFC0799AANY288A3FC0"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/ViewHitsCounter/ViewerEndpoint/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ViewHitsCounterViewerEndpointANYD58999C4"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/GatewayUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GatewayUrl"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/TableViewerUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableViewerUrl"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/cdk-workshop/Deploy/WebService/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "cdk-workshop/Deploy/WebService"
+    }
+  }
+}

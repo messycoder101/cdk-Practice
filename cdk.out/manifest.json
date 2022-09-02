@@ -1,0 +1,215 @@
+{
+  "version": "21.0.0",
+  "artifacts": {
+    "assembly-cdk-workshop-Deploy": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-cdk-workshop-Deploy",
+        "displayName": "cdk-workshop/Deploy"
+      }
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "cdk-workshop.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "cdk-workshop.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "cdk-workshop": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "cdk-workshop.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/d2991550d17e1676d6cf457cf6ece100098dc7074bb78225aefd0e7f004f8406.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "cdk-workshop.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "cdk-workshop.assets"
+      ],
+      "metadata": {
+        "/cdk-workshop/WorkshopRepo/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WorkshopRepoE6F95803"
+          }
+        ],
+        "/cdk-workshop/WorkshopRepo/cdkworkshopPipeline129FF13DEventRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WorkshopRepocdkworkshopPipeline129FF13DEventRule3F549FD0"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketAEA9A052"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Pipeline/ArtifactsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketPolicyF53CCC52"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleB27FAA37"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleDefaultPolicy7BDC1ABB"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Pipeline9850B417"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Pipeline/Source/CodeCommit/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineSourceCodeCommitCodePipelineActionRole48F8DEFA"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Pipeline/Source/CodeCommit/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineSourceCodeCommitCodePipelineActionRoleDefaultPolicy3CEB31C0"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Pipeline/EventsRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineEventsRole96280D9B"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Pipeline/EventsRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineEventsRoleDefaultPolicy62809D8F"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProjectRole231EEA2A"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProjectRoleDefaultPolicyFB6C941C"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthCdkBuildProject6BEFA8E6"
+          }
+        ],
+        "/cdk-workshop/Pipeline/CodeBuildActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCodeBuildActionRole226DB0CB"
+          }
+        ],
+        "/cdk-workshop/Pipeline/CodeBuildActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCodeBuildActionRoleDefaultPolicy1D62A6FE"
+          }
+        ],
+        "/cdk-workshop/Pipeline/UpdatePipeline/SelfMutation/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRole57E559E8"
+          }
+        ],
+        "/cdk-workshop/Pipeline/UpdatePipeline/SelfMutation/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRoleDefaultPolicyA225DA4E"
+          }
+        ],
+        "/cdk-workshop/Pipeline/UpdatePipeline/SelfMutation/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationDAA41400"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Assets/FileRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileRole59943A77"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Assets/FileRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileRoleDefaultPolicy14DB8755"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Assets/FileAsset1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset185A67CB4"
+          }
+        ],
+        "/cdk-workshop/Pipeline/Assets/FileAsset2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset24D2D639B"
+          }
+        ],
+        "/cdk-workshop/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/cdk-workshop/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/cdk-workshop/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/cdk-workshop/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "cdk-workshop"
+    }
+  }
+}
